@@ -1,0 +1,4 @@
+docker build -t jewelry-app .
+docker run -p 80:80 jewelry-app    
+winget install --id=GnuWin32.Zip
+aws s3 mb s3://jewelry-shop-s3-bucket --region us-east-1 --no-verify-ssl
