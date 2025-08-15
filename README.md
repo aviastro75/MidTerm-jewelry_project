@@ -1,4 +1,5 @@
 Jewelry Inventory Management System
+
 Overview
 This project provides a simple inventory management system for a jewelry shop. It includes:
 
@@ -98,11 +99,12 @@ Deployment to AWS Elastic Beanstalk
 Configure AWS CLI with credentials.
 Update deploy.sh variables (e.g., APP_NAME, REGION, S3_BUCKET).
 Ensure zip is available (script handles Windows fallback).
-winget install --id=GnuWin32.Zip
+
+        winget install --id=GnuWin32.Zip
 Run ./deploy.sh (make executable if needed: chmod +x deploy.sh).
 
 create s3 bucket:
-aws s3 mb s3://jewelry-shop-s3-bucket --region us-east-1 --no-verify-ssl
+        aws s3 mb s3://jewelry-shop-s3-bucket --region us-east-1 --no-verify-ssl
 
 
 The script:
