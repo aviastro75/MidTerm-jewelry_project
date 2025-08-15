@@ -1,11 +1,15 @@
 Jewelry Inventory Management System
 
 Overview
+
 This project provides a simple inventory management system for a jewelry shop. It includes:
 
 A console-based application for basic CRUD operations and summaries using an in-memory data store.
+
 A web-based application built with Flask, using SQLite for persistence, served via Apache and mod_wsgi.
+
 Docker containerization for the web app.
+
 Deployment script to AWS Elastic Beanstalk via ECR and S3.
 
 The system supports adding items (rings, bracelets, necklaces in silver/gold), viewing inventory, marking items as sold, updating items, calculating profit summaries, and getting inventory summaries.
@@ -104,6 +108,7 @@ Ensure zip is available (script handles Windows fallback).
 Run ./deploy.sh (make executable if needed: chmod +x deploy.sh).
 
 create s3 bucket:
+
         aws s3 mb s3://jewelry-shop-s3-bucket --region us-east-1 --no-verify-ssl
 
 
