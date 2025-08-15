@@ -30,25 +30,27 @@ AWS CLI (for deployment)
 AWS account with ECR, S3, Elastic Beanstalk permissions
 
 Directory Structure
-text.
-├── main.py                  # Console application entry point
-├── functions.py             # Shared functions (adapted for console in-memory or web SQLite)
-├── app.py                   # Flask web application
-├── app.wsgi                 # WSGI config for Apache
-├── apache.conf              # Apache VirtualHost config
-├── Dockerfile               # Docker build for web app
-├── deploy.sh                # Deployment script to AWS
-├── Dockerrun.aws.json       # Elastic Beanstalk Docker config
-├── templates/               # Jinja2 templates for web UI
-│   ├── add.html
-│   ├── menu.html
-│   ├── profit.html
-│   ├── show.html
-│   ├── sold.html
-│   └── update.html
-└── static/                  # CSS and JS for web UI
-    ├── styles.css
-    └── scripts.js
+
+
+    ├── main.py                  # Console application entry point
+    ├── functions.py             # Shared functions (adapted for console in-memory or web SQLite)
+    ├── app.py                   # Flask web application
+    ├── app.wsgi                 # WSGI config for Apache
+    ├── apache.conf              # Apache VirtualHost config
+    ├── Dockerfile               # Docker build for web app
+    ├── deploy.sh                # Deployment script to AWS
+    ├── Dockerrun.aws.json       # Elastic Beanstalk Docker config
+    ├── templates/               # Jinja2 templates for web UI
+    │   ├── add.html
+    │   ├── menu.html
+    │   ├── profit.html
+    │   ├── show.html
+    │   ├── sold.html
+    │   └── update.html
+    └── static/                  # CSS and JS for web UI
+        ├── styles.css
+        └── scripts.js
+
 Setup and Installation
 Console App
 
@@ -96,7 +98,12 @@ Deployment to AWS Elastic Beanstalk
 Configure AWS CLI with credentials.
 Update deploy.sh variables (e.g., APP_NAME, REGION, S3_BUCKET).
 Ensure zip is available (script handles Windows fallback).
+winget install --id=GnuWin32.Zip
 Run ./deploy.sh (make executable if needed: chmod +x deploy.sh).
+
+create s3 bucket:
+aws s3 mb s3://jewelry-shop-s3-bucket --region us-east-1 --no-verify-ssl
+
 
 The script:
 
