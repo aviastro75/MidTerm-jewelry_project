@@ -71,8 +71,11 @@ Access the dashboard and navigate via the sidebar.
 Web App (Docker Local)
 
 Build the image:
+
     docker build -t jewelry-app .
+    
 Run the container: 
+
     docker run -p 80:80 jewelry-app
     
 Access at
