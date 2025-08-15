@@ -70,11 +70,14 @@ Access the dashboard and navigate via the sidebar.
 
 Web App (Docker Local)
 
-Build the image: docker build -t jewelry-app .
-Run the container: docker run -p 80:80 jewelry-app
-Access at http://localhost/.
+Build the image:
+    docker build -t jewelry-app .
+Run the container: 
+    docker run -p 80:80 jewelry-app
+    
+Access at
+    http://localhost:80.
 
-Note: The Docker setup creates /var/www/flask_app/inventory.db on first run if missing.
 Usage
 Console App
 
